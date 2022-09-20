@@ -19,6 +19,16 @@ h6 {
   @apply inline-flex text-white hover:text-white dark:text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg;
 }
 
+.project-card {
+  @apply flex flex-col rounded-xl 
+  transition duration-300 transform border border-gray-300
+  hover:scale-105 
+  hover:shadow-lg
+  dark:border-gray-200/50
+  dark:hover:shadow-gray-400/40
+  hover:text-blue-600;
+}
+
 footer {
   @apply text-gray-600 dark:text-white
   bg-gray-100 dark:bg-slate-600/20;
