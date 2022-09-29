@@ -12,18 +12,20 @@ export default function ProjectItem({ data }) {
 
   const calculatedPeriod = (start, end) => {
     const startDateStringArray = start.split("-");
-    const endDateStringArray = end.split("-");
+    const endDateStringArray = end?.split("-");
 
-    var startDate = new Date(
+    let startDate = new Date(
       startDateStringArray[0],
       startDateStringArray[1],
       startDateStringArray[2]
     );
-    var endDate = new Date(
-      endDateStringArray[0],
-      endDateStringArray[1],
-      endDateStringArray[2]
-    );
+    let endDate = end
+      ? new Date(
+          endDateStringArray[0],
+          endDateStringArray[1],
+          endDateStringArray[2]
+        )
+      : null;
 
     const diffInMs = Math.abs(endDate - startDate);
     const result = diffInMs / (1000 * 60 * 60 * 24);
@@ -45,10 +47,11 @@ export default function ProjectItem({ data }) {
       <div className="p-4 flex flex-col">
         <h1 className="text-2xl font-bold">{title}</h1>
         <h3 className="mt-4 text-xl">{description}</h3>
-        <a href={github}>Github</a>
-        <a href={youtube}>Youtube</a>
+        {github && <a href={github}>Github 바로가기</a>}
+        {youtube && <a href={youtube}>Youtube 바로가기</a>}
         <p className="my-4">
-          작업기간: {start} ~ {end} {calculatedPeriod(start, end)}일
+          작업기간: {start} ~ {end ? end : null}
+          {end ? ` (${calculatedPeriod(start, end)}일)` : `진행 중`}
         </p>
 
         <div className="flex items-start mt-2">

@@ -4,7 +4,7 @@ import ProjectItem from "../components/projects/project-item";
 import { DATABASE_ID, TOKEN } from "../config";
 
 export default function Projects({ projects }) {
-  // console.log(projects);
+  console.log(projects);
   return (
     <Layout>
       <div className="flex flex-col items-center justify-center min-h-screen mb-10 px-6">
@@ -18,7 +18,7 @@ export default function Projects({ projects }) {
           <span className="pl-4 text-blue-500">{projects.results.length}</span>
         </h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 py-10 m-6 gap-8 lg:grid-cols-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 py-10 m-6 gap-8 lg:grid-cols-4">
           {projects.results.map((aProject) => (
             <ProjectItem key={aProject.id} data={aProject} />
           ))}
