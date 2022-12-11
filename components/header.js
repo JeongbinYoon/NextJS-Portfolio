@@ -20,7 +20,7 @@ export default function Header() {
               >
                 <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
               </svg>
-              <span className="ml-3 text-xl">JB 포트폴리오</span>
+              <span className="ml-3 text-xl">윤정빈 포트폴리오</span>
             </a>
           </Link>
 
@@ -31,9 +31,9 @@ export default function Header() {
             <Link href="/projects">
               <a className="mr-5 hover:text-gray-900">프로젝트</a>
             </Link>
-            <Link href="/contact">
+            {/* <Link href="/contact">
               <a className="mr-5 hover:text-gray-900">연락하기</a>
-            </Link>
+            </Link> */}
           </nav>
           <DarkModeToggleButton />
         </div>
