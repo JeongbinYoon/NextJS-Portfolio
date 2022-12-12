@@ -41,3 +41,11 @@ a {
 p {
   @apply text-slate-500 dark:text-slate-400;
 }
+
+.tag {
+  flex-wrap: wrap;
+}
+
+.tag h1 {
+  margin-top: 10px;
+}

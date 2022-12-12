@@ -54,7 +54,7 @@ export default function ProjectItem({ data }) {
           {end ? ` (${calculatedPeriod(start, end)}일)` : `진행 중`}
         </p>
 
-        <div className="flex items-start mt-2">
+        <div className="flex items-start mt-2 tag">
           {tags.map((aTag) => (
             <h1
               className="px-2 py-1 mr-2 rounded-md bg-sky-200 dark:bg-sky-700 w-30"
